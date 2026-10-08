@@ -1,0 +1,768 @@
+{
+  "live_vm_telemetry": {
+    "vm_host": "saich@Varun",
+    "kernel": "Linux 6.18.33.2-microsoft-standard-WSL2",
+    "cpu_cores": 12,
+    "load_1m": 0.14,
+    "mem_total_mb": 7598,
+    "mem_used_mb": 571,
+    "mem_used_pct": 7.52,
+    "mg_vm3_cpu_pct": 7.0,
+    "mg_vm6_oper_state": "up (active)",
+    "bfd_session_down": false,
+    "s5_peer_state": "pathUp",
+    "cluster_health": "RESOLVED",
+    "checked_at": "2026-10-08T17:04:13Z",
+    "raw_vm_output": "HOST=saich@Varun\nKERNEL=Linux 6.18.33.2-microsoft-standard-WSL2\nCORES=12\nLOAD_1M=0.14\nMEM_TOTAL_MB=7598\nMEM_USED_MB=571\nMEM_PCT=7.52\n===============================================================================\nLINUX VM TELECOM NODE STATUS (Host: saich@Varun | State: RESOLVED)\n===============================================================================\nNode Software : Nokia CMG v26.7.R1 | VM Topology: lb-mode | Fast-path: enabled\nMG Service    : [active] and [enabled]\n\nSlot   VM-Instance      Role / Function         Admin   Oper-State   CPU-Load\n-------------------------------------------------------------------------------\nA      OAM-A            Active CPM              up      up           6.4%\nB      OAM-B            Standby CPM             up      up           5.1%\n1      LB-VM1           Load Balancer 1         up      up           8.2%\n3      MG-VM3           Mobile Gateway Worker   up      up           7.0% (Normal - Rebalanced)\n6      MG-VM6           MSCP Control Worker     up      up (active)  6.8% (Resynced)\n===============================================================================\n===============================================================================\nLinux VM [saich@Varun]$ show vm   (VM State: RESOLVED)\n===============================================================================\nSlot   Linux-VM Name    Role                    Admin   Oper State   CPU / Status\n-------------------------------------------------------------------------------\nA      OAM-A (CPM)      Active Control Plane    up      up           6.4% CPU\nB      OAM-B (CPM)      Standby Control Plane   up      up           5.1% CPU\n1      LB-VM1           Load Balancer           up      up           8.2% CPU\n3      MG-VM3           Mobile Gateway Worker   up      up           7.0% CPU (Normal - RESOLVED)\n6      MG-VM6           MSCP Control Worker     up      up           6.8% CPU (Active - RESOLVED)\n===============================================================================\n===============================================================================\nLinux VM [saich@Varun]$ show router Base bfd session   (VM State: RESOLVED)\n===============================================================================\nSession Id                                        State      Tx Pkts    Rx Pkts\n-------------------------------------------------------------------------------\nvprn201-s1u-link (<MASKED-IP>)                    Up (3)       48500      48500\nvprn100-sx-n4    (<MASKED-IP>)                    Up (3)       95800      95800\n-------------------------------------------------------------------------------\nNo. of BFD sessions: 2 (2 Up, 0 Down - RESOLVED BY AGENTIC AI CLI)\n===============================================================================\n===============================================================================\nLinux VM [saich@Varun]$ show mobile-gateway pdn ref-point-peer   (VM State: RESOLVED)\n===============================================================================\nPeer IP           Ref-Pt   Peer-Type   State       Restart-Cnt   Peer-Name\n-------------------------------------------------------------------------------\n<MASKED-IP>       s5       sgw         pathUp      105           MASKED_PEER_SGW (RESOLVED)\n<MASKED-IP>       gx       pcrf        pathUp      12            MASKED_PEER_PCRF_GX\n<MASKED-IP>       gy       ocs         pathUp      8             MASKED_PEER_GY\n==============================================================================="
+  },
+  "nodes_checked": [
+    "MASKED-CPF-01",
+    "MASKED-UPF-01",
+    "MASKED-UPF-02"
+  ],
+  "total_kpi_rows": 75,
+  "total_fluctuations": 46,
+  "baselines": {
+    "MASKED-CPF-01": {
+      "max_cpm_cpu_pct": {
+        "baseline_median": 7.0,
+        "min": 4.0,
+        "max": 15.0
+      },
+      "avg_isa_cpu_pct": {
+        "baseline_median": 3.36,
+        "min": 2.27,
+        "max": 3.45
+      },
+      "avg_memory_utilization_pct": {
+        "baseline_median": 34.89,
+        "min": 20.0,
+        "max": 34.89
+      },
+      "cntrl_fabric_max_jitter_us": {
+        "baseline_median": 7878.0,
+        "min": 378.0,
+        "max": 23453.0
+      },
+      "data_fabric_max_jitter_us": {
+        "baseline_median": 6040.0,
+        "min": 357.0,
+        "max": 12821.0
+      },
+      "s5_update_bearer_fails": {
+        "baseline_median": 0.0,
+        "min": 0.0,
+        "max": 6.0
+      },
+      "s5_modify_bearer_sr_pct": {
+        "baseline_median": 100.0,
+        "min": 100.0,
+        "max": 100.0
+      },
+      "s2b_session_sr_pct": {
+        "baseline_median": 100.0,
+        "min": 4.17,
+        "max": 100.0
+      },
+      "total_traffic_mb": {
+        "baseline_median": 0.03,
+        "min": 0.0,
+        "max": 1871.94
+      }
+    },
+    "MASKED-UPF-01": {
+      "max_cpm_cpu_pct": {
+        "baseline_median": 7.0,
+        "min": 4.0,
+        "max": 15.0
+      },
+      "avg_isa_cpu_pct": {
+        "baseline_median": 3.36,
+        "min": 2.27,
+        "max": 3.45
+      },
+      "avg_memory_utilization_pct": {
+        "baseline_median": 34.89,
+        "min": 20.0,
+        "max": 34.89
+      },
+      "cntrl_fabric_max_jitter_us": {
+        "baseline_median": 7878.0,
+        "min": 378.0,
+        "max": 23453.0
+      },
+      "data_fabric_max_jitter_us": {
+        "baseline_median": 6040.0,
+        "min": 357.0,
+        "max": 12821.0
+      },
+      "s5_update_bearer_fails": {
+        "baseline_median": 0.0,
+        "min": 0.0,
+        "max": 6.0
+      },
+      "s5_modify_bearer_sr_pct": {
+        "baseline_median": 100.0,
+        "min": 100.0,
+        "max": 100.0
+      },
+      "s2b_session_sr_pct": {
+        "baseline_median": 100.0,
+        "min": 4.17,
+        "max": 100.0
+      },
+      "total_traffic_mb": {
+        "baseline_median": 0.03,
+        "min": 0.0,
+        "max": 1871.94
+      }
+    },
+    "MASKED-UPF-02": {
+      "max_cpm_cpu_pct": {
+        "baseline_median": 7.0,
+        "min": 4.0,
+        "max": 15.0
+      },
+      "avg_isa_cpu_pct": {
+        "baseline_median": 3.36,
+        "min": 2.27,
+        "max": 3.45
+      },
+      "avg_memory_utilization_pct": {
+        "baseline_median": 34.89,
+        "min": 20.0,
+        "max": 34.89
+      },
+      "cntrl_fabric_max_jitter_us": {
+        "baseline_median": 7878.0,
+        "min": 378.0,
+        "max": 23453.0
+      },
+      "data_fabric_max_jitter_us": {
+        "baseline_median": 6040.0,
+        "min": 357.0,
+        "max": 12821.0
+      },
+      "s5_update_bearer_fails": {
+        "baseline_median": 0.0,
+        "min": 0.0,
+        "max": 6.0
+      },
+      "s5_modify_bearer_sr_pct": {
+        "baseline_median": 100.0,
+        "min": 100.0,
+        "max": 100.0
+      },
+      "s2b_session_sr_pct": {
+        "baseline_median": 100.0,
+        "min": 4.17,
+        "max": 100.0
+      },
+      "total_traffic_mb": {
+        "baseline_median": 0.03,
+        "min": 0.0,
+        "max": 1871.94
+      }
+    }
+  },
+  "fluctuations": [
+    {
+      "source": "LIVE VM (saich@Varun)",
+      "node": "MASKED-UPF-01 (vprn201-s1u-link)",
+      "timestamp": "2026-10-08T17:04:13Z",
+      "kpi_metric": "bfd_session_state (show router Base bfd session)",
+      "normal_baseline": 0.0,
+      "observed_value": 0.0,
+      "fluctuation": "NORMAL (BFD Up (3) - RESOLVED)",
+      "cli_fix_command": "clear router Base bfd session vprn201-s1u-link",
+      "severity": "RESOLVED (CLEARED)",
+      "triggered_alarm_code": "VRTR #2061 (RESOLVED)",
+      "triggered_alarm_type": "BFD_SESSION_DOWN_NBR_SIGNAL"
+    },
+    {
+      "source": "LIVE VM (saich@Varun)",
+      "node": "MASKED-CPF-01 (MG-VM6 / ISA-MS MDA 2/6)",
+      "timestamp": "2026-10-08T17:04:13Z",
+      "kpi_metric": "cntrl_fabric_max_jitter_us & mscp_vm6_state (show vm / show mda)",
+      "normal_baseline": 7878.0,
+      "observed_value": 7878.0,
+      "fluctuation": "NORMAL (MG-VM6 up/active - RESOLVED)",
+      "cli_fix_command": "tools perform mobile-gateway mscp resync",
+      "severity": "RESOLVED (CLEARED)",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2016 (RESOLVED)",
+      "triggered_alarm_type": "MSCP_CARD_OPER_STATE_STANDBY"
+    },
+    {
+      "source": "LIVE VM (saich@Varun)",
+      "node": "MASKED-CPF-01 (MG-VM3 Worker)",
+      "timestamp": "2026-10-08T17:04:13Z",
+      "kpi_metric": "mg_vm3_cpu_pct (show vm)",
+      "normal_baseline": 7.0,
+      "observed_value": 7.0,
+      "fluctuation": "NORMAL (7.0% CPU - RESOLVED)",
+      "cli_fix_command": "tools perform mobile-gateway ism-mg cpu-rebalance",
+      "severity": "RESOLVED (CLEARED)",
+      "triggered_alarm_code": "SNMP #2102 (RESOLVED)",
+      "triggered_alarm_type": "RMON_CPU_THRESHOLD_ALARM"
+    },
+    {
+      "source": "LIVE VM (saich@Varun)",
+      "node": "MASKED-CPF-01 (s5 Peer MASKED_PEER_SGW)",
+      "timestamp": "2026-10-08T17:04:13Z",
+      "kpi_metric": "s5_update_bearer_fails (show mobile-gateway pdn ref-point-peer)",
+      "normal_baseline": 0.0,
+      "observed_value": 0.0,
+      "fluctuation": "NORMAL (S5 pathUp - RESOLVED)",
+      "cli_fix_command": "clear mobile-gateway pdn ref-point-peer s5",
+      "severity": "RESOLVED (CLEARED)",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001 (RESOLVED)",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2026-09-29T13:15:00+05:30",
+      "kpi_metric": "max_cpm_cpu_pct",
+      "normal_baseline": 7.0,
+      "observed_value": 15.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.49,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "SNMP #2102",
+      "triggered_alarm_type": "RMON_CPU_THRESHOLD_ALARM"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "max_cpm_cpu_pct",
+      "normal_baseline": 7.0,
+      "observed_value": 14.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.05,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "SNMP #2102",
+      "triggered_alarm_type": "RMON_CPU_THRESHOLD_ALARM"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2025-02-10T06:15:00+05:30",
+      "kpi_metric": "cntrl_fabric_max_jitter_us",
+      "normal_baseline": 7878.0,
+      "observed_value": 23453.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.09,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2016",
+      "triggered_alarm_type": "MSCP_CARD_OPER_STATE_STANDBY"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2025-02-10T07:00:00+05:30",
+      "kpi_metric": "data_fabric_max_jitter_us",
+      "normal_baseline": 6040.0,
+      "observed_value": 12821.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.11,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "VRTR #2061",
+      "triggered_alarm_type": "BFD_SESSION_DOWN_NBR_SIGNAL"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2026-09-29T13:15:00+05:30",
+      "kpi_metric": "s5_update_bearer_fails",
+      "normal_baseline": 0.0,
+      "observed_value": 4.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.54,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2026-09-29T13:30:00+05:30",
+      "kpi_metric": "s5_update_bearer_fails",
+      "normal_baseline": 0.0,
+      "observed_value": 6.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.82,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "s5_update_bearer_fails",
+      "normal_baseline": 0.0,
+      "observed_value": 4.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.54,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2025-02-10T10:00:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 33.33,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 2.19,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2026-09-29T13:15:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 4.17,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 3.15,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2026-09-29T14:00:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 33.33,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 2.19,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 8.33,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 3.02,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2026-09-29T13:45:00+05:30",
+      "kpi_metric": "total_traffic_mb",
+      "normal_baseline": 0.03,
+      "observed_value": 1871.94,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.06,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "SYSTEM #2009",
+      "triggered_alarm_type": "PORT_OR_REDUNDANCY_STATE_CHANGE"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2026-09-29T14:00:00+05:30",
+      "kpi_metric": "total_traffic_mb",
+      "normal_baseline": 0.03,
+      "observed_value": 1669.2,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.73,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "SYSTEM #2009",
+      "triggered_alarm_type": "PORT_OR_REDUNDANCY_STATE_CHANGE"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-CPF-01",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "total_traffic_mb",
+      "normal_baseline": 0.03,
+      "observed_value": 1784.53,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.92,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "SYSTEM #2009",
+      "triggered_alarm_type": "PORT_OR_REDUNDANCY_STATE_CHANGE"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2026-09-29T13:15:00+05:30",
+      "kpi_metric": "max_cpm_cpu_pct",
+      "normal_baseline": 7.0,
+      "observed_value": 15.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.49,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "SNMP #2102",
+      "triggered_alarm_type": "RMON_CPU_THRESHOLD_ALARM"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "max_cpm_cpu_pct",
+      "normal_baseline": 7.0,
+      "observed_value": 14.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.05,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "SNMP #2102",
+      "triggered_alarm_type": "RMON_CPU_THRESHOLD_ALARM"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2025-02-10T06:15:00+05:30",
+      "kpi_metric": "cntrl_fabric_max_jitter_us",
+      "normal_baseline": 7878.0,
+      "observed_value": 23453.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.09,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2016",
+      "triggered_alarm_type": "MSCP_CARD_OPER_STATE_STANDBY"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2025-02-10T07:00:00+05:30",
+      "kpi_metric": "data_fabric_max_jitter_us",
+      "normal_baseline": 6040.0,
+      "observed_value": 12821.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.11,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "VRTR #2061",
+      "triggered_alarm_type": "BFD_SESSION_DOWN_NBR_SIGNAL"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2026-09-29T13:15:00+05:30",
+      "kpi_metric": "s5_update_bearer_fails",
+      "normal_baseline": 0.0,
+      "observed_value": 4.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.54,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2026-09-29T13:30:00+05:30",
+      "kpi_metric": "s5_update_bearer_fails",
+      "normal_baseline": 0.0,
+      "observed_value": 6.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.82,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "s5_update_bearer_fails",
+      "normal_baseline": 0.0,
+      "observed_value": 4.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.54,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2025-02-10T10:00:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 33.33,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 2.19,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2026-09-29T13:15:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 4.17,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 3.15,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2026-09-29T14:00:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 33.33,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 2.19,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 8.33,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 3.02,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2026-09-29T13:45:00+05:30",
+      "kpi_metric": "total_traffic_mb",
+      "normal_baseline": 0.03,
+      "observed_value": 1871.94,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.06,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "SYSTEM #2009",
+      "triggered_alarm_type": "PORT_OR_REDUNDANCY_STATE_CHANGE"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2026-09-29T14:00:00+05:30",
+      "kpi_metric": "total_traffic_mb",
+      "normal_baseline": 0.03,
+      "observed_value": 1669.2,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.73,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "SYSTEM #2009",
+      "triggered_alarm_type": "PORT_OR_REDUNDANCY_STATE_CHANGE"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-01",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "total_traffic_mb",
+      "normal_baseline": 0.03,
+      "observed_value": 1784.53,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.92,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "SYSTEM #2009",
+      "triggered_alarm_type": "PORT_OR_REDUNDANCY_STATE_CHANGE"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2026-09-29T13:15:00+05:30",
+      "kpi_metric": "max_cpm_cpu_pct",
+      "normal_baseline": 7.0,
+      "observed_value": 15.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.49,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "SNMP #2102",
+      "triggered_alarm_type": "RMON_CPU_THRESHOLD_ALARM"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "max_cpm_cpu_pct",
+      "normal_baseline": 7.0,
+      "observed_value": 14.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.05,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "SNMP #2102",
+      "triggered_alarm_type": "RMON_CPU_THRESHOLD_ALARM"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2025-02-10T06:15:00+05:30",
+      "kpi_metric": "cntrl_fabric_max_jitter_us",
+      "normal_baseline": 7878.0,
+      "observed_value": 23453.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.09,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2016",
+      "triggered_alarm_type": "MSCP_CARD_OPER_STATE_STANDBY"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2025-02-10T07:00:00+05:30",
+      "kpi_metric": "data_fabric_max_jitter_us",
+      "normal_baseline": 6040.0,
+      "observed_value": 12821.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.11,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "VRTR #2061",
+      "triggered_alarm_type": "BFD_SESSION_DOWN_NBR_SIGNAL"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2026-09-29T13:15:00+05:30",
+      "kpi_metric": "s5_update_bearer_fails",
+      "normal_baseline": 0.0,
+      "observed_value": 4.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.54,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2026-09-29T13:30:00+05:30",
+      "kpi_metric": "s5_update_bearer_fails",
+      "normal_baseline": 0.0,
+      "observed_value": 6.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.82,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "s5_update_bearer_fails",
+      "normal_baseline": 0.0,
+      "observed_value": 4.0,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.54,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2025-02-10T10:00:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 33.33,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 2.19,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2026-09-29T13:15:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 4.17,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 3.15,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2026-09-29T14:00:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 33.33,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 2.19,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "s2b_session_sr_pct",
+      "normal_baseline": 100.0,
+      "observed_value": 8.33,
+      "fluctuation": "LOW (DROP)",
+      "z_score": 3.02,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "MOBILE_GATEWAY #2001",
+      "triggered_alarm_type": "GTP_PATH_STATE_IDLE_TRANSITION"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2026-09-29T13:45:00+05:30",
+      "kpi_metric": "total_traffic_mb",
+      "normal_baseline": 0.03,
+      "observed_value": 1871.94,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 3.06,
+      "severity": "CRITICAL",
+      "triggered_alarm_code": "SYSTEM #2009",
+      "triggered_alarm_type": "PORT_OR_REDUNDANCY_STATE_CHANGE"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2026-09-29T14:00:00+05:30",
+      "kpi_metric": "total_traffic_mb",
+      "normal_baseline": 0.03,
+      "observed_value": 1669.2,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.73,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "SYSTEM #2009",
+      "triggered_alarm_type": "PORT_OR_REDUNDANCY_STATE_CHANGE"
+    },
+    {
+      "source": "XML KPI Log on VM",
+      "node": "MASKED-UPF-02",
+      "timestamp": "2026-09-29T14:15:00+05:30",
+      "kpi_metric": "total_traffic_mb",
+      "normal_baseline": 0.03,
+      "observed_value": 1784.53,
+      "fluctuation": "HIGH (SPIKE)",
+      "z_score": 2.92,
+      "severity": "MAJOR",
+      "triggered_alarm_code": "SYSTEM #2009",
+      "triggered_alarm_type": "PORT_OR_REDUNDANCY_STATE_CHANGE"
+    }
+  ]
+}
